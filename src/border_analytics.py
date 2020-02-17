@@ -84,7 +84,7 @@ def write_to_file(data, output_file_location):
         for datetimestamp, borders_measures in data.items():
             for border_measure, total_dict in borders_measures.items():
                 border, measure = border_measure.split(',')
-                date = datetimestamp.strftime("%d/%m/%Y %H:%M:%S %p")
+                date = datetimestamp.strftime("%d/%m/%Y %H:%M:%S AM")
                 value = str(total_dict['total'])
                 average = str(total_dict['running_total'])
                 write_file.write(border + ',' + date + ',' + measure + ',')
